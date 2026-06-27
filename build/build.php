@@ -47,7 +47,7 @@ $pageContent = str_replace(
   $pageContent
 );
 
-/* HERO IMAGES (multiple rotating images) */
+/* HERO IMAGES */
 $heroImagesHtml = '';
 
 if (!empty($config['hero']['images']) && is_array($config['hero']['images'])) {
@@ -118,6 +118,13 @@ $pageContent = str_replace(
   file_get_contents(
     $root . "/templates/sections/form/{$config['design']['formVariant']}.html"
   ),
+  $pageContent
+);
+
+/* ⭐⭐⭐ NEW: BUTTONS SECTION (inserted AFTER FORM) ⭐⭐⭐ */
+$pageContent = str_replace(
+  '{{SECTION_BUTTONS}}',
+  file_get_contents($root . '/templates/sections/buttons.html'),
   $pageContent
 );
 
@@ -315,6 +322,28 @@ if (!empty($config['faq'])) {
 $pageContent = str_replace(
   '{{FAQ_ITEMS}}',
   $faqHtml,
+  $pageContent
+);
+
+/* ⭐⭐⭐ NEW: BUTTONS ITEMS ⭐⭐⭐ */
+$buttonsHtml = '';
+$buttonTemplate = file_get_contents(
+  $root . "/templates/components/buttons/button.html"
+);
+
+if (!empty($config['buttons'])) {
+  foreach ($config['buttons'] as $btn) {
+    $buttonsHtml .= str_replace(
+      ['{{BUTTON_TITLE}}', '{{BUTTON_URL}}'],
+      [$btn['BUTTON_TITLE'], $btn['BUTTON_URL']],
+      $buttonTemplate
+    );
+  }
+}
+
+$pageContent = str_replace(
+  '{{BUTTONS_ITEMS}}',
+  $buttonsHtml,
   $pageContent
 );
 

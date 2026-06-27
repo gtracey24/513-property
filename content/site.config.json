@@ -1,18 +1,21 @@
 {
+
   "site": {
-    "name": "513 Solutions",
+    "name": "513 Property Management",
     "language": "en"
   },
   "seo": {
-    "title": "513 Solutions — Handyman/Remodeling Services in Edwardsville, IL",
-    "description": "For all your handyman and remodeling needs in Edwardsville, IL",
-    "canonical": "https://513solutions.net/",
+    "title": "513 Property Management — Rental Homes & Tenant Services in Edwardsville, IL",
+    "description": "Local, reliable property management serving Edwardsville, IL. Quality rentals, responsive maintenance, and a team that treats your property like it's ours.",
+    "canonical": "https://513propertymanagement.com/",
     "ogImage": "/assets/images/og-image.png"
-  },
+  }
+
+,
   "design": {
     "theme": "friendly",
     "stylesheet": "friendly-startup.css",
-    "heroVariant": "split-gallery",
+    "heroVariant": "background-image",
     "aboutVariant": "about-left-image",
     "serviceStyle": "service-card-simple",
     "processStyle": "default",
@@ -21,36 +24,38 @@
     "formVariant": "form-external"
   },
 "hero": {
-  "headline": "For all your handyman</br>and remodeling needs.",
-  "subheadline": "Making home projects simple, stress‑free, and done right throughout Edwardsville and surrounding communities.",
-  "images": [
-    "/assets/images/hero-image-1.jpg",
-    "/assets/images/hero-image-2.jpg",
-    "/assets/images/hero-image-3.jpg",
-    "/assets/images/hero-image-4.jpg"
-  ],
-  "cta": {
-    "label": "Get Started",
-    "url": "#contact"
+  "headline": "Supporting Tenants. Empowering Owners.",
+  "subheadline": "Whether you live here or invest here, we make property management simple, responsive, and stress‑free.",
+  "image": "assets/images/sarah.jpg",
+"cta": [
+  {
+    "CTA_LABEL": "For Tenants",
+    "CTA_URL": "#tenants"
+  },
+  {
+    "CTA_LABEL": "For Owners",
+    "CTA_URL": "#owners"
+  },
+  {
+    "CTA_LABEL": "View Vacancies",
+    "CTA_URL": "#vacancies"
   }
+]
+
 },
   "cta": {
-    "headline": "Your success is our priority from start to finish.",
+    "headline": "",
     "button": {},
-    "name": "",
-    "email": "",
-    "phone": "",
-    "image": "/assets/images/profile.jpg",
-    "description": "We provide clear guidance, reliable support, and solutions tailored to your goals. Let’s build something that moves your business forward."
+    "name": "513 Property Management",
+    "email": "jbakley@513.net",
+    "phone": "618.363.5130",
+    "image": "/assets/images/513-property.png",
+    "description": ""
   },
   "navigation": [
     {
-      "label": "Services",
+      "label": "Pay Rent",
       "url": "#services"
-    },
-    {
-      "label": "Process",
-      "url": "#process"
     },
     {
       "label": "Contact",
@@ -85,37 +90,7 @@
     "description": "We help keep rentals in top shape with fast, reliable service. From turnover repairs to ongoing maintenance, we make property management easier and protect your investment with dependable, professional care.",
     "focus": ["Turnovers", "Repairs", "Maintenance", "Tenant‑Ready Prep", "Emergency Services"]
   }
-]
-,
-  "training_packages": [
-    {
-      "number": "01",
-      "title": "Starter Package — $35/month",
-      "tagline": "Perfect for new businesses or teams needing structure and direction.",
-      "duration": "",
-      "focus": [],
-      "description": "Build a strong foundation with guided planning, consistent check‑ins, and essential tools to help your business operate smoothly.",
-      "gradient": "linear-gradient(135deg, #0a84ff15, #ffd60a15)"
-    },
-    {
-      "number": "02",
-      "title": "Growth Package — $50/month",
-      "tagline": "Ideal for businesses preparing for expansion, launches, or major initiatives.",
-      "duration": "",
-      "focus": [],
-      "description": "Includes weekly feedback, strategy sessions, and tailored planning to help you execute projects with confidence and clarity.",
-      "gradient": "linear-gradient(135deg, rgba(0,122,255,0.12), rgba(135,206,250,0.12))"
-    },
-    {
-      "number": "03",
-      "title": "Premium Package — $75/month",
-      "tagline": "For businesses seeking high‑touch support, optimization, and long‑term growth.",
-      "duration": "",
-      "focus": [],
-      "description": "Hands‑on consulting with detailed reviews, performance tracking, and adaptive planning to help you reach your most important goals.",
-      "gradient": "linear-gradient(135deg, rgba(255,94,58,0.12), rgba(255,195,0,0.12))"
-    }
-  ],
+],
   "gallery": [
     {
       "image": "/assets/images/gallery-1.jpg",
@@ -239,7 +214,47 @@
       "BUTTON_TITLE": "Property Management Inquiry",
       "BUTTON_URL": "https://example.com/management"
     }
-  ]
+  ],
+"tenants": [
+  { "TITLE": "Pay Rent", "URL": "/pay" },
+  { "TITLE": "Maintenance Request", "URL": "/maintenance" },
+  { "TITLE": "Apply for a Unit", "URL": "/apply" }
+],
+"owners": [
+  { "TITLE": "Owner Portal", "URL": "/portal" },
+  { "TITLE": "Contact Management", "URL": "/contact" }
+],
+"vacancies": [
+  { "TITLE": "Available Units", "URL": "/vacancies" },
+  { "TITLE": "Schedule a Tour", "URL": "/tour" }
+],
+"sections": {
+  "tenants_section": {
+    "token": "SECTION_TENANTS",
+    "itemsToken": "TENANTS_ITEMS",
+    "jsonKey": "tenants",
+    "component": "actions/item.html",
+    "section": "tenants.html",
+    "title": "For Tenants"
+  },
+  "owners_section": {
+    "token": "SECTION_OWNERS",
+    "itemsToken": "OWNERS_ITEMS",
+    "jsonKey": "owners",
+    "component": "actions/item.html",
+    "section": "owners.html",
+    "title": "For Owners"
+  },
+  "vacancies_section": {
+    "token": "SECTION_VACANCIES",
+    "itemsToken": "VACANCIES_ITEMS",
+    "jsonKey": "vacancies",
+    "component": "actions/item.html",
+    "section": "vacancies.html",
+    "title": "Available Rentals"
+}
+}
+
 
 
 }

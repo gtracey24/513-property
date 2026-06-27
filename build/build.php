@@ -121,6 +121,8 @@ $pageContent = str_replace(
   $pageContent
 );
 
+
+
 /* ⭐⭐⭐ NEW: BUTTONS SECTION (inserted AFTER FORM) ⭐⭐⭐ */
 $pageContent = str_replace(
   '{{SECTION_BUTTONS}}',
@@ -135,9 +137,40 @@ $pageContent = str_replace(
   $pageContent
 );
 
+foreach ($config['sections'] as $section) {
+    $sectionHtml = file_get_contents($root . "/templates/sections/" . $section['section']);
+    $sectionHtml = str_replace('{{SECTION_TITLE}}', $section['title'], $sectionHtml);
+
+    $pageContent = str_replace('{{' . $section['token'] . '}}', $sectionHtml, $pageContent);
+}
+
+
 /* ============================================================
  * PHASE 2: COMPONENT INJECTION (repeatable blocks)
  * ============================================================ */
+
+/* HERO CTA BUTTONS */
+$ctaHtml = '';
+$ctaTemplate = file_get_contents(
+  $root . "/templates/components/hero/cta-button.html"
+);
+
+if (!empty($config['hero']['cta'])) {
+  foreach ($config['hero']['cta'] as $cta) {
+    $ctaHtml .= str_replace(
+      ['{{CTA_LABEL}}', '{{CTA_URL}}'],
+      [$cta['CTA_LABEL'], $cta['CTA_URL']],
+      $ctaTemplate
+    );
+  }
+}
+
+$pageContent = str_replace(
+  '{{HERO_CTA_BUTTONS}}',
+  $ctaHtml,
+  $pageContent
+);
+
 
 /* SERVICES ITEMS */
 $servicesHtml = '';
@@ -346,6 +379,27 @@ $pageContent = str_replace(
   $buttonsHtml,
   $pageContent
 );
+
+foreach ($config['sections'] as $section) {
+
+    $itemsHtml = '';
+    $componentTemplate = file_get_contents($root . "/templates/components/" . $section['component']);
+
+    $items = $config[$section['jsonKey']] ?? [];
+
+    foreach ($items as $item) {
+        $itemHtml = $componentTemplate;
+
+        foreach ($item as $key => $value) {
+            $itemHtml = str_replace('{{' . $key . '}}', $value, $itemHtml);
+        }
+
+        $itemsHtml .= $itemHtml;
+    }
+
+    $pageContent = str_replace('{{' . $section['itemsToken'] . '}}', $itemsHtml, $pageContent);
+}
+
 
 /* ============================================================
  * PHASE 3: WRAP PAGE CONTENT WITH LAYOUT

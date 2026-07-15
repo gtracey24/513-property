@@ -57,11 +57,6 @@
     <div class="collapse navbar-collapse" id="mainNav">
      <ul class="navbar-nav ms-auto">
   <li class="nav-item">
-  <a class="nav-link" href="#services">
-    Pay Rent
-  </a>
-</li>
-<li class="nav-item">
   <a class="nav-link" href="#contact">
     Contact
   </a>
@@ -112,13 +107,13 @@
         <p class="lead">Whether you live here or invest here, we make property management simple, responsive, and stress‑free.</p>
 
         <div class="hero-cta-buttons d-flex gap-3 flex-wrap justify-content-center">
-          <a href="#tenants" class="btn btn-primary btn-lg me-3">
+          <a href="#tenants" class="btn btn-primary btn-lg cta-pop me-3">
   For Tenants
 </a>
-<a href="#owners" class="btn btn-primary btn-lg me-3">
+<a href="#owners" class="btn btn-primary btn-lg cta-pop me-3">
   For Owners
 </a>
-<a href="#vacancies" class="btn btn-primary btn-lg me-3">
+<a href="#vacancies" class="btn btn-primary btn-lg cta-pop me-3">
   View Vacancies
 </a>
 
@@ -165,7 +160,7 @@
     </ul>
 
     <div class="actions-wrapper d-flex flex-wrap justify-content-end gap-4 mt-4">
-      <a href="/pay" 
+      <a href="https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=account-picker&redirect_uri=https%3A%2F%2Faccount.appfolio.com%2Frealms%2Ffoliospace%2Fappfolio%2Faccount-picker%2Flogin-redirect%3Fpath%3D%2F&state=0%2Ff0d8e79b-478b-4df9-1ada-42f90485d881&response_type=code&scope=openid" 
    class="action-button btn btn-lg px-4 py-3 w-540"
    style="
      background: #222;
@@ -178,9 +173,9 @@
    "
    onmouseover="this.style.background='#000'"
    onmouseout="this.style.background='#222'">
-  Pay Rent
+  Tenant Portal Login
 </a>
-<a href="/maintenance" 
+<a href="https://www.appfolio.com/help/online-portal" 
    class="action-button btn btn-lg px-4 py-3 w-540"
    style="
      background: #222;
@@ -193,22 +188,7 @@
    "
    onmouseover="this.style.background='#000'"
    onmouseout="this.style.background='#222'">
-  Maintenance Request
-</a>
-<a href="/apply" 
-   class="action-button btn btn-lg px-4 py-3 w-540"
-   style="
-     background: #222;
-     color: #fff;
-     border-radius: 8px;
-     font-weight: 700;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     transition: all .2s ease;
-   "
-   onmouseover="this.style.background='#000'"
-   onmouseout="this.style.background='#222'">
-  Apply for a Unit
+  Tenant Portal Help
 </a>
 
     </div>
@@ -251,7 +231,7 @@
     </ul>
 
     <div class="actions-wrapper d-flex flex-wrap gap-4 mt-4">
-      <a href="/portal" 
+      <a href="https://www.appfolio.com/help/owner" 
    class="action-button btn btn-lg px-4 py-3 w-540"
    style="
      background: #222;
@@ -289,69 +269,39 @@
 </section>
 
 
-<section id="vacancies" class="py-6" style="
-  background: linear-gradient(135deg, #2e8b8f, #4fb3bf);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-">
+<section id="vacancies" class="py-6"
+  style="
+    background: linear-gradient(135deg, #2e8b8f, #4fb3bf);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ">
 
-  <div style="max-width:900px; margin:0 auto; text-align:right;">
+  <div class="vacancies-wide" style="width:100%; max-width:1400px; margin:0 auto; text-align:center;">
 
-    <h2 style="font-size:2.8rem; font-weight:700; margin-bottom:25px;">
+    <h2 class="vacancies-title" style="font-size:2.8rem; font-weight:700; margin-bottom:25px;">
       Available Rentals
     </h2>
 
-    <h3 style="margin-bottom:20px; font-size:2.2rem; font-weight:700;">
-      Find a place you’ll feel at home.
-    </h3>
+    <div class="vacancies-embed">
 
-    <p style="margin-bottom:25px; line-height:1.7; font-size:1.25rem;">
-      We keep our rentals clean, safe, and ready for you. Whether you're looking for your first
-      apartment or a long‑term home, we make the process simple and straightforward so you can move
-      in with confidence.
-    </p>
+      <script type='text/javascript' charset='utf-8'>
+        document.write(unescape("%3Cscript src='" + 
+          (('https:' == document.location.protocol) ? 'https:' : 'http:') + 
+          "//fiveonethreesolutions.appfolio.com/javascripts/listing.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
 
-    <ul style="padding-right:25px; margin:0 0 35px 0; line-height:1.8; font-size:1.25rem; list-style-position: inside;">
-      <li>Updated, well‑maintained properties</li>
-      <li>Easy application process</li>
-      <li>Clear communication every step of the way</li>
-      <li>Homes ready for fast move‑in</li>
-    </ul>
-
-    <div class="actions-wrapper d-flex flex-wrap justify-content-end gap-4 mt-4">
-      <a href="/vacancies" 
-   class="action-button btn btn-lg px-4 py-3 w-540"
-   style="
-     background: #222;
-     color: #fff;
-     border-radius: 8px;
-     font-weight: 700;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     transition: all .2s ease;
-   "
-   onmouseover="this.style.background='#000'"
-   onmouseout="this.style.background='#222'">
-  Available Units
-</a>
-<a href="/tour" 
-   class="action-button btn btn-lg px-4 py-3 w-540"
-   style="
-     background: #222;
-     color: #fff;
-     border-radius: 8px;
-     font-weight: 700;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     transition: all .2s ease;
-   "
-   onmouseover="this.style.background='#000'"
-   onmouseout="this.style.background='#222'">
-  Schedule a Tour
-</a>
+      <script type='text/javascript' charset='utf-8'>
+        Appfolio.Listing({
+          hostUrl: 'fiveonethreesolutions.appfolio.com',
+          themeColor: '#676767',
+          height: '600px',
+          width: '100%',
+          defaultOrder: 'date_posted'
+        });
+      </script>
 
     </div>
 
@@ -391,9 +341,9 @@
       📞 618.363.5130
     </div>
 
-    <a href="mailto:jbakley@513.net" 
+    <a href="mailto:jbakley@513solutions.net" 
        style="font-size: 1.1rem; font-weight: 500; color: #333;">
-      jbakley@513.net
+      jbakley@513solutions.net
     </a>
 
   </div>

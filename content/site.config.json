@@ -47,16 +47,12 @@
     "headline": "",
     "button": {},
     "name": "513 Property Management",
-    "email": "jbakley@513.net",
+    "email": "jbakley@513solutions.net",
     "phone": "618.363.5130",
     "image": "/assets/images/513-property.png",
     "description": ""
   },
   "navigation": [
-    {
-      "label": "Pay Rent",
-      "url": "#services"
-    },
     {
       "label": "Contact",
       "url": "#contact"
@@ -216,12 +212,11 @@
     }
   ],
 "tenants": [
-  { "TITLE": "Pay Rent", "URL": "/pay" },
-  { "TITLE": "Maintenance Request", "URL": "/maintenance" },
-  { "TITLE": "Apply for a Unit", "URL": "/apply" }
+  { "TITLE": "Tenant Portal Login", "URL": "https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=account-picker&redirect_uri=https%3A%2F%2Faccount.appfolio.com%2Frealms%2Ffoliospace%2Fappfolio%2Faccount-picker%2Flogin-redirect%3Fpath%3D%2F&state=0%2Ff0d8e79b-478b-4df9-1ada-42f90485d881&response_type=code&scope=openid"},
+{"TITLE": "Tenant Portal Help", "URL": "https://www.appfolio.com/help/online-portal" }
 ],
 "owners": [
-  { "TITLE": "Owner Portal", "URL": "/portal" },
+  { "TITLE": "Owner Portal", "URL": "https://www.appfolio.com/help/owner" },
   { "TITLE": "Contact Management", "URL": "/contact" }
 ],
 "vacancies": [

@@ -24,7 +24,7 @@
     "formVariant": "form-external"
   },
 "hero": {
-  "headline": "Supporting Tenants. Empowering Owners.",
+  "headline": "Your property managed by the<br>513 Solutions team.",
   "subheadline": "Whether you live here or invest here, we make property management simple, responsive, and stress‑free.",
   "image": "assets/images/sarah.jpg",
 "cta": [
@@ -46,10 +46,10 @@
   "cta": {
     "headline": "",
     "button": {},
-    "name": "513 Property Management",
+    "name": "513 Solutions",
     "email": "jbakley@513solutions.net",
     "phone": "618.363.5130",
-    "image": "/assets/images/513-property.png",
+    "image": "/assets/images/logo-513solutions.png",
     "description": ""
   },
   "navigation": [

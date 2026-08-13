@@ -290,3 +290,94 @@
 .hero-animate {
   animation: heroFloatIn 1s ease-out forwards;
 }
+
+/* ============================================
+   MOBILE COMFORT LAYER
+   Makes the site breathe on small screens
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* Global spacing */
+  body {
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+
+  main#content {
+    padding: 1rem 0;
+  }
+
+  section {
+    padding: 1.5rem 0;
+  }
+
+  /* Headings scale down */
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Paragraph readability */
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Navbar spacing */
+  nav.navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  nav .navbar-brand img {
+    max-width: 150px;
+  }
+
+  /* Buttons */
+  .btn,
+  button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Cards */
+  .card,
+  .service-card {
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+  }
+
+  /* Fix cramped columns */
+  .row > [class*="col-"] {
+    margin-bottom: 1rem;
+  }
+
+  /* Forms */
+  form input,
+  form textarea,
+  form select {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+  }
+}

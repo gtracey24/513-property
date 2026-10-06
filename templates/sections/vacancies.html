@@ -8,13 +8,13 @@
     justify-content: center;
   ">
 
-  <div class="vacancies-wide" style="width:100%; max-width:1400px; margin:0 auto; text-align:center;">
+  <div class="vacancies-wide" style="width:75%; max-width:1400px; margin:0 auto; text-align:center;  padding: 50px; border-radius: 10px; background: rgba(255, 255, 255, 0.1); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.3);">
 
     <h2 class="vacancies-title" style="font-size:2.8rem; font-weight:700; margin-bottom:25px;">
       {{SECTION_TITLE}}
     </h2>
 
-    <div class="vacancies-embed">
+    <!-- <div class="vacancies-embed">
 
       <script type='text/javascript' charset='utf-8'>
         document.write(unescape("%3Cscript src='" + 
@@ -30,7 +30,9 @@
           width: '100%',
           defaultOrder: 'date_posted'
         });
-      </script>
+      </script> -->
+
+      {{VACANCIES_ITEMS}}
 
     </div>
 

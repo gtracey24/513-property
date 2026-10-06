@@ -212,16 +212,13 @@
     }
   ],
 "tenants": [
-  { "TITLE": "Tenant Portal Login", "URL": "https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=account-picker&redirect_uri=https%3A%2F%2Faccount.appfolio.com%2Frealms%2Ffoliospace%2Fappfolio%2Faccount-picker%2Flogin-redirect%3Fpath%3D%2F&state=0%2Ff0d8e79b-478b-4df9-1ada-42f90485d881&response_type=code&scope=openid"},
-{"TITLE": "Tenant Portal Help", "URL": "https://www.appfolio.com/help/online-portal" }
+{"TITLE": "Contact Management", "URL": "#contact" }
 ],
 "owners": [
-  { "TITLE": "Owner Portal", "URL": "https://www.appfolio.com/help/owner" },
-  { "TITLE": "Contact Management", "URL": "/contact" }
+  { "TITLE": "Contact Management", "URL": "#contact" }
 ],
 "vacancies": [
-  { "TITLE": "Available Units", "URL": "/vacancies" },
-  { "TITLE": "Schedule a Tour", "URL": "/tour" }
+  { "TITLE": "Coming soon!", "URL": "#vacancies" }
 ],
 "sections": {
   "tenants_section": {
